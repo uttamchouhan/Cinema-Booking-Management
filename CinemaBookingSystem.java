@@ -30,7 +30,7 @@ public class CinemaBookingSystem {
             System.out.println("9. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine();  // consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -69,12 +69,12 @@ public class CinemaBookingSystem {
     private void addMovie() {
         System.out.print("Enter movie ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine();
         System.out.print("Enter movie title: ");
         String title = scanner.nextLine();
         System.out.print("Enter movie duration (in minutes): ");
         String duration = scanner.nextLine();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine(); 
 
         movies.add(new Movie(id, title, duration));
         System.out.println("Movie added successfully!");
@@ -93,10 +93,10 @@ public class CinemaBookingSystem {
     private void addShowtime() {
         System.out.print("Enter showtime ID: ");
         int showtimeId = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine(); 
         System.out.print("Enter movie ID for the showtime: ");
         int movieId = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine(); 
         System.out.print("Enter showtime (e.g., 2024-07-04 14:30): ");
         String time = scanner.nextLine();
 
@@ -122,7 +122,7 @@ public class CinemaBookingSystem {
     private void addCustomer() {
         System.out.print("Enter customer ID: ");
         int customerId = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine(); 
         System.out.print("Enter customer name: ");
         String name = scanner.nextLine();
         System.out.print("Enter customer contact info: ");
@@ -145,16 +145,16 @@ public class CinemaBookingSystem {
     private void createBooking() {
         System.out.print("Enter booking ID: ");
         int bookingId = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine();  
         System.out.print("Enter showtime ID: ");
         int showtimeId = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine(); 
         System.out.print("Enter customer ID: ");
         int customerId = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine(); 
         System.out.print("Enter number of seats: ");
         int numberOfSeats = scanner.nextInt();
-        scanner.nextLine();  // consume newline
+        scanner.nextLine();  
 
         Showtime showtime = findShowtimeById(showtimeId);
         Customer customer = findCustomerById(customerId);
